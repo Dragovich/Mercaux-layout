@@ -27,3 +27,5 @@ const nextSlide = () => {
         }
     }
 }
+
+setInterval(nextSlide, 2000)
