@@ -1,0 +1,130 @@
+.task1_body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 200px;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (max-width: 700px) {
+  .task1_body {
+    grid-template-columns: repeat(3, 1fr);
+    height: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .task1_body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .task1_body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.task2_body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.field_task2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 400px;
+  }
+
+  p {
+    width: 50%;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.field_task2:nth-child(2n+1) {
+  img {
+    order: 1
+  }
+}
+
+@media (max-width: 600px) {
+  .field_task2 {
+    flex-direction: column;
+  }
+  .field_task2:nth-child(2n+1) {
+    img {
+      width: 100%;
+      height: auto;
+      order: unset
+    }
+  }
+}
+
+.task4_body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .btn {
+    font-size: 32px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .task4_field {
+    display: none;
+    width: 80%;
+    height: auto;
+    justify-content: center;
+    position: relative;
+
+    img {
+      height: 75vh;
+    }
+
+    p {
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      background: #FFF;
+      border: 1px solid;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: -15%;
+      right: 25%;
+    }
+  }
+
+  .active {
+    display: flex;
+  }
+}
+
+.task9_body {
+  width: 100%;
+  height: 400px;
+  background: url(../img/task9/section-4-back@2x.jpg) no-repeat;
+  background-size: auto 400px;
+}
+
+.task10_body {
+  img {
+    filter: invert(41%) sepia(99%) saturate(1290%) hue-rotate(142deg) brightness(96%) contrast(101%);
+  }
+}
+
